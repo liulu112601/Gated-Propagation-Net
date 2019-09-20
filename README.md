@@ -42,7 +42,7 @@
 ## Dataset Extraction 
 
 ### Using proposed datasets:
-The proposed datasets can be downloader [here](https://drive.google.com/drive/folders/1XMvsd0lC3bXgfctBQkp3ju3a-MS_mbYy?usp=sharingg).
+The proposed datasets can be downloaded [here](https://drive.google.com/drive/folders/1XMvsd0lC3bXgfctBQkp3ju3a-MS_mbYy?usp=sharingg).
 
 ### Extracting datasets by yourself:
 1. Download images: Please download `tiered-imagenet.tar` from [here](https://github.com/renmengye/few-shot-ssl-public#tieredimagenet), and extract it into `${HOME}/datasets/`. Therefore, there should be a directory : `${HOME}/datasets/tiered-imagenet/`.
