@@ -41,10 +41,10 @@
 
 ## Dataset Extraction 
 
-# Using proposed datasets:
+### Using proposed datasets:
 The proposed datasets can be downloader [here](https://drive.google.com/drive/folders/1XMvsd0lC3bXgfctBQkp3ju3a-MS_mbYy?usp=sharingg).
 
-# Extracting datasets by yourself:
+### Extracting datasets by yourself:
 1. Download images: Please download `tiered-imagenet.tar` from [here](https://github.com/renmengye/few-shot-ssl-public#tieredimagenet), and extract it into `${HOME}/datasets/`. Therefore, there should be a directory : `${HOME}/datasets/tiered-imagenet/`.
 
 2. Download class graph: Please download WordNet structure `structure_released.xml` from [here](https://drive.google.com/file/d/1oVNnYVfiLF9t7IKocsQXsJOk4EOiPkVJ/view?usp=sharing), and put it into `${ROOT}/sample-tiered-imagenet/`
