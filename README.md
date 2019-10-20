@@ -1,4 +1,4 @@
-# Learning to Propagate for Graph Meta-Learning 
+# [Learning to Propagate for Graph Meta-Learning](https://arxiv.org/abs/1909.05024)
 
 ## Requirements
 - Python       >=3.6  
@@ -42,12 +42,15 @@
 ## Dataset Extraction 
 
 ### Using proposed datasets:
-The proposed datasets can be downloaded [here](https://drive.google.com/drive/folders/1XMvsd0lC3bXgfctBQkp3ju3a-MS_mbYy?usp=sharingg).
+The proposed datasets can be downloaded [Google Drive](https://drive.google.com/drive/folders/1XMvsd0lC3bXgfctBQkp3ju3a-MS_mbYy?usp=sharingg).
+
+Please extract `tieredImageNet-Close.tgz` into `${HOME}/datasets/`, then there will be a folder `${HOME}/datasets/graph-tiered-1-4`.
+Please extract `tieredImageNet-Far.tgz` into `${HOME}/datasets/`, then there will be a folder `${HOME}/datasets/graph-tiered-5-10`.
 
 ### Extracting datasets by yourself:
 1. Download images: Please download `tiered-imagenet.tar` from [here](https://github.com/renmengye/few-shot-ssl-public#tieredimagenet), and extract it into `${HOME}/datasets/`. Therefore, there should be a directory : `${HOME}/datasets/tiered-imagenet/`.
 
-2. Download class graph: Please download WordNet structure `structure_released.xml` from [here](https://drive.google.com/file/d/1oVNnYVfiLF9t7IKocsQXsJOk4EOiPkVJ/view?usp=sharing), and put it into `${ROOT}/sample-tiered-imagenet/`
+2. Download class graph: Please download WordNet structure `structure_released.xml` from [Google Drive](https://drive.google.com/file/d/1oVNnYVfiLF9t7IKocsQXsJOk4EOiPkVJ/view?usp=sharing), and put it into `${ROOT}/sample-tiered-imagenet/`
 
 3. Compute some statistics for the classes, images and the graph. Sample a training set of classes based on these information:
 `python sample-tiered-imagenet/build_data_dag.py graph-tiered`
@@ -78,6 +81,7 @@ We introduce selected parameters here. Please refer `lib/configs/args.py` for al
 - `--sample`             : Subgraph sampling strategy
 - `--n_hop`              : Number of propagation steps
 - `--n_heads`            : Number of heads for attention-based propagation
+- `--dataset_roo`        : The root directories of our `tieredImageNet-Close` and `tieredImageNet-Far`
 
 ## Experiments of GPN
 Usage (train GPN and evaluate the trained GPN every `$test_interval$` epochs):
@@ -92,7 +96,7 @@ If you find this project helpful, please consider to cite the following paper:
 @inproceedings{liu2019GPN,
   title={Learning to Propagate for Graph Meta-Learning},
   author={Liu, Lu and Zhou, Tianyi and Long, Guodong and Jiang, Jing and Zhang, Chengqi},
-  booktitle={ Conference on Neural Information Processing Systems (NeurIPS)},
+  booktitle={Neural Information Processing Systems (NeurIPS)},
   year={2019}
 }
 ```
