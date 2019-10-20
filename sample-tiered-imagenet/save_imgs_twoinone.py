@@ -46,5 +46,3 @@ if __name__ == '__main__':
     os.system("rm {}/train_info.pth".format(load_dir)) 
     #os.system("rm {}/wordid2idx.pth".format(load_dir)) 
  '''   
-
-
