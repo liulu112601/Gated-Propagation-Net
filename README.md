@@ -84,7 +84,7 @@ We introduce selected parameters here. Please refer `lib/configs/args.py` for al
 - `--sample`             : Subgraph sampling strategy
 - `--n_hop`              : Number of propagation steps
 - `--n_heads`            : Number of heads for attention-based propagation
-- `--dataset_roo`        : The root directories of our `tieredImageNet-Close` and `tieredImageNet-Far`
+- `--dataset_root`        : The root directories of our `tieredImageNet-Close` and `tieredImageNet-Far`
 
 ## Experiments of GPN
 Usage (train GPN and evaluate the trained GPN every `$test_interval$` epochs):
