@@ -53,8 +53,6 @@
 ### Extracting datasets by yourself:
 1. Download images: Please download `tiered-imagenet.tar` from [here](https://github.com/renmengye/few-shot-ssl-public#tieredimagenet), and extract it into `${HOME}/datasets/`. Therefore, there should be a directory : `${HOME}/datasets/tiered-imagenet/`.
 
-#2. Download class graph: Please download WordNet structure `structure_released.xml` from [Google Drive](https://drive.google.com/file/d/1oVNnYVfiLF9t7IKocsQXsJOk4EOiPkVJ/view?usp=sharing), and put it into `${ROOT}/sample-tiered-imagenet/`
-
 2. Compute some statistics for the classes, images and the graph. Sample a training set of classes based on these information:
 `python sample-tiered-imagenet/build_data_dag.py graph-tiered`
 We fixed the random seed as the one we used for the paper. There should be 773 training classes sampled and a directory stores the statistics about the graph: `${HOME}/datasets/graph-tiered/`
