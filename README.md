@@ -53,20 +53,20 @@
 ### Extracting datasets by yourself:
 1. Download images: Please download `tiered-imagenet.tar` from [here](https://github.com/renmengye/few-shot-ssl-public#tieredimagenet), and extract it into `${HOME}/datasets/`. Therefore, there should be a directory : `${HOME}/datasets/tiered-imagenet/`.
 
-2. Download class graph: Please download WordNet structure `structure_released.xml` from [Google Drive](https://drive.google.com/file/d/1oVNnYVfiLF9t7IKocsQXsJOk4EOiPkVJ/view?usp=sharing), and put it into `${ROOT}/sample-tiered-imagenet/`
+#2. Download class graph: Please download WordNet structure `structure_released.xml` from [Google Drive](https://drive.google.com/file/d/1oVNnYVfiLF9t7IKocsQXsJOk4EOiPkVJ/view?usp=sharing), and put it into `${ROOT}/sample-tiered-imagenet/`
 
-3. Compute some statistics for the classes, images and the graph. Sample a training set of classes based on these information:
+2. Compute some statistics for the classes, images and the graph. Sample a training set of classes based on these information:
 `python sample-tiered-imagenet/build_data_dag.py graph-tiered`
 We fixed the random seed as the one we used for the paper. There should be 773 training classes sampled and a directory stores the statistics about the graph: `${HOME}/datasets/graph-tiered/`
 
-4. Sample a test set of classes with the minimal hops`${MIN-DIS}` and the maximal hops `${MAX-DIS}` to the training set:
+3. Sample a test set of classes with the minimal hops`${MIN-DIS}` and the maximal hops `${MAX-DIS}` to the training set:
 `python sample-tiered-imagenet/build_classes_dif_distance.py graph-tiered-${MIN-DIS}-${MAX-DIS} ${MIN-DIS} ${MAX-DIS}`
 For tieredImageNet-Close: `${MIN-DIS}=1` `${MAX-DIS}=4`. For tieredImageNet-Far: `${MIN-DIS}=5` `${MAX-DIS}=10`.
 There should be 315 test classes sampled for tieredImageNet-Close and 26 test classes sampled for tieredImageNet-Far. The following directory should be created:`${HOME}/datasets/graph-tiered-${MIN-DIS}-${MAX-DIS}`.
 
-5. Sample the images per class: `python sample-tiered-imagenet/pre_data_for_model.py graph-tiered`
+4. Sample the images per class: `python sample-tiered-imagenet/pre_data_for_model.py graph-tiered`
 
-6. Save images for PyTorch: `python sample-tiered-imagenet/save_imgs.py graph-tiered`, `python sample-tiered-imagenet/save_imgs_twoinone.py graph-tiered-1-4 graph-tiered-5-10 IMGS` 
+5. Save images for PyTorch: `python sample-tiered-imagenet/save_imgs.py graph-tiered`, `python sample-tiered-imagenet/save_imgs_twoinone.py graph-tiered-1-4 graph-tiered-5-10 IMGS` 
 
 ## Parameters for training Gated Propagation Network (GPN)
 
