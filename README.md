@@ -41,7 +41,7 @@
 
 ## Dataset Extraction 
 
-### Using proposed datasets:
+### Using proposed datasets (Preferred):
 1. The proposed datasets can be downloaded [Google Drive](https://drive.google.com/drive/folders/1XMvsd0lC3bXgfctBQkp3ju3a-MS_mbYy?usp=sharingg).
 
 2. Please extract `tieredImageNet-Close.tgz` into `${HOME}/datasets/`, then there will be a folder `${HOME}/datasets/graph-tiered-1-4`.
