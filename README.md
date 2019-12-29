@@ -48,7 +48,7 @@
 
 3. Please extract `tieredImageNet-Far.tgz` into `${HOME}/datasets/`, then there will be a folder `${HOME}/datasets/graph-tiered-5-10`.
 
-4. Save images for PyTorch: `python sample-tiered-imagenet/save_imgs.py graph-tiered`, `python sample-tiered-imagenet/save_imgs_twoinone.py graph-tiered-1-4 graph-tiered-5-10 IMGS`
+4. Save images for PyTorch: `python sample-tiered-imagenet/save_imgs_twoinone.py graph-tiered-1-4 graph-tiered-5-10 IMGS`
 
 ### Extracting datasets by yourself:
 1. Download images: Please download `tiered-imagenet.tar` from [here](https://github.com/renmengye/few-shot-ssl-public#tieredimagenet), and extract it into `${HOME}/datasets/`. Therefore, there should be a directory : `${HOME}/datasets/tiered-imagenet/`.
