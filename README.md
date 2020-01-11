@@ -2,7 +2,7 @@
 
 ## Requirements
 - Python       >=3.6  
-- PyTorch      >=1.0  
+- PyTorch      >=1.3.0  
 - torchvision  >=0.2.2  
 - tqdm         >=4.31.1  
 - opencv       >=3.4.2  
